@@ -1,0 +1,55 @@
+#wrap {
+	position: relative;
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 60px;
+	background: $modal-col;
+	width: 100%;
+	z-index: 50;
+	@include mq(tablet) {
+		background: none;
+	}
+}
+
+.section{
+	text-align: center;
+}
+
+.section.home {
+	 position: relative;
+	 font-size: 30px;
+	overflow: hidden;
+}
+
+.section.about {
+	background-image: url(#{$path-img}/bg-about.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	@include bg-overlay;
+}
+
+.section.work {
+	background-image: url(#{$path-img}/bg-work.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	@include bg-overlay;
+}
+
+.section.contact {
+	background-image: url(#{$path-img}/bg-contact.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	@include bg-overlay;
+}
+
+.m-content {
+	position: relative;
+	z-index: 10;
+}

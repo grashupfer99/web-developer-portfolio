@@ -1,0 +1,73 @@
+video::-webkit-media-controls {
+	  display:none !important;
+}
+
+.project {
+    @include e(btn){
+        font-family: $font-stack--primary;
+        display: flex;
+        margin: auto 0;
+        padding: 7px 30px;
+        background: rgba(255,255,255,0.7);
+        color: $black;
+        outline: none;
+        border: 0;
+        cursor: pointer;
+        border-radius: 6px;
+        font-size: 15px;
+        @include mq(mobile) {
+            font-size: 16px;
+            padding: 10px 40px;
+        }
+    }  
+}
+
+.contact-me-btn {
+    position: relative;
+    margin-top: 20px;
+    @include mq(tablet){
+        margin-top: 50px;
+    }
+    & a {
+        display: inline-block;
+        font-family: $font-stack--home02;
+        background: $black;
+        color: $white;
+        padding: 10px 20px;
+        font-size: 20px;
+        outline: none;
+        position:relative;
+        overflow: hidden;
+        @include transition(color .5s ease);
+        @include mq(tablet){
+            padding: 15px 30px;
+            font-size: 30px;
+        }
+        &::before,
+        &::after {
+            border: 2px solid transparent;
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+        &::before {
+            top: 0;
+            left: -4px;
+        }
+        &::after {
+            bottom: 0;
+            right: -4px;
+        }     
+    }
+}
+
+
+
+
+
+
+
+
+
+

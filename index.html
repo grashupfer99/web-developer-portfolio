@@ -1,0 +1,228 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Web Developer Portfolio</title>
+        <meta name="description" content="front end web developer portfolio website">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+		 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/fullpage/jquery.fullpage.css">
+        <link rel="stylesheet" href="css/fontawesome/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/animate/animate.css">
+        <link rel="stylesheet" href="css/slick/slick.css">
+        <link rel="stylesheet" href="css/slick/slick-theme.css">
+        <link rel="stylesheet" href="css/tingle/tingle.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+        <!-- wrap -->
+        <div id="wrap">
+
+            <div class="modal"></div>
+
+            <!-- header -->
+            <div id="header">
+                <!-- .gnb -->
+                <ul id="menu">
+                    <li data-menuanchor="firstPage">
+                        <a href="#firstPage">
+                            <span>Home</span>
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li data-menuanchor="secondPage">
+                        <a href="#secondPage">
+                            <span>About Me</span>
+                            <i class="fa fa-user"></i>
+                        </a>
+                    </li>
+                    <li data-menuanchor="thirdPage">
+                        <a href="#thirdPage">
+                            <span>Projects</span>
+                            <i class="fa fa-briefcase"></i>
+                        </a>
+                    </li>
+                    <li data-menuanchor="lastPage">
+                        <a href="#lastPage">
+                            <span>Contact</span>
+                            <i class="fa fa-paper-plane"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- //header -->
+
+            <div class="sidenav-toggle">
+                <div class="sidenav-toggle__inner">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <ul class="sidenav">
+                <li><a href="#firstPage">Home</a></li>
+                <li><a href="#secondPage">About Me</a></li>
+                <li><a href="#thirdPage">Projects</a></li>
+                <li><a href="#lastPage">Contact</a></li>
+            </ul>
+
+            <!-- container -->
+            <div id="container">
+
+                <!-- fullpage -->
+                <div id="fullpage">
+                    
+                    <!-- section home -->
+                    <div class="section home">
+                        <div class="fullscreen-bg">
+                            <video loop muted data-autoplay class="fullscreen-bg__video">
+                                <source src="img/bg-video.webm" type="video/webm">
+                                <source src="img/bg-video.mp4" type="video/mp4">
+                            </video>
+                        </div>  
+                        <div class="main-headings animated bounceInLeft">
+                            <h1>John Smith</h1>
+                            <h2><i class="fa fa-code"></i> Web Developer</h2>
+                            <div class="contact-me-btn">
+                                <a href="#lastPage">Contact Me</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //section home -->
+
+                    <!-- section about -->
+                    <div class="section about">
+                        <div class="m-content" id="about">
+                            <h1 class="m-subtitle">About Me</h1>
+
+                            <div class="profile-wrapper">
+                                <div class="profile-img">
+                                    <img src="img/profile-img.jpg" alt="Web Developer">
+                                </div>
+
+                                <div class="profile-intro">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus velit nec sem condimentum hendrerit. Mauris a mollis urna. Fusce eget metus libero. Suspendisse ornare tortor nisl, id consequat lorem volutpat a. Morbi vitae orci diam. Proin euismod viverra consequat.</p>
+                                </div>
+                            </div>
+
+                            <div class="profile-skills">
+                                <div class="profile-skills__table">
+                                    <div class="row">
+                                        <span><i class="fab fa-html5"></i>HTML5</span>
+                                    </div>
+                                    <div class="row">
+                                        <span><i class="fab fa-css3-alt"></i>CSS3</span> 
+                                        <span><i class="fab fa-sass"></i>Sass</span>
+                                        <span>Bootstrap</span>
+                                    </div>
+                                    <div class="row">
+                                        <span><i class="fab fa-js-square"></i>JavaScript</span>
+                                        <span>jQuery</span>
+                                    </div>
+                                    <div class="row">
+                                        <span><i class="fab fa-wordpress"></i>WordPress</span>
+                                    </div>
+                                    <div class="row">
+                                        <span>Adobe Photoshop / Illustrator</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //section about -->
+
+                    <!-- section work -->
+                    <div class="section work">
+                        <div class="m-content">
+                            <h1 class="m-subtitle">Projects</h1>
+                            <div class="project-list">                              
+                                <ul class="projects mySlick"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //section work -->
+
+                    <!-- section contact -->
+                    <div class="section contact">
+                        <div class="m-content">
+                            <h1 class="m-subtitle">Contact Me</h1>
+                            <div class="contact-form">
+                                <div class="contact-form__wrapper">
+                                    <ul class="contact-info">
+                                        <li>   
+                                            <a href="#"><i class="fa fa-phone"></i> Tel: +82-0000-0000</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-envelope"></i> Email: developer@example.com</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fab fa-skype"></i> Skype: my_id</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul class="social-media">
+                                    <li>
+                                        <a href="#" target="_blank" title="Github">
+                                            <i class="fab fa-github-square"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank" title="LinkedIn">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="signature">
+                            <span>
+                                Made with 
+                                <i class="fa fa-heart"></i>
+                                and 
+                                <i class="fa fa-coffee"></i>
+                                by <a href="http://alexkhant.com" target="_blank" style="color:inherit; text-decoration:underline;">Alex Khant</a>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- //section contact -->
+
+                </div>
+                <!-- //fullpage -->
+
+            </div>
+            <!-- //container -->
+
+        </div>
+        <!-- //wrap -->
+
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script> src="js/vendor/jquery.easings.min.js"</script>
+        <script src="js/vendor/scrolloverflow.min.js"></script>
+        <script src="js/fullpage/jquery.fullpage.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/tingle/tingle.min.js"></script>
+        <script src="js/project-data.js"></script>
+        <script src="js/plugins.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>

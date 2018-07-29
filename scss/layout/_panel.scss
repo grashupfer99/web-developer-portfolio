@@ -1,0 +1,255 @@
+.fullscreen-bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index:3;  
+    background-image: url(#{$path-img}/bg-home-sm.jpg); 
+    background-size: cover;  
+    &:before {
+        display: none;
+        @include mq(mobile) {
+            display: none;
+        }
+        @include mq(tablet) {
+            display: block;
+        }
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255,0.5);
+        z-index: 4;
+    }
+    @include e(video) {
+        display: none;
+        @include mq(mobile) {
+            display: none;
+        }
+        @include mq(tablet) {
+            display: block;
+        } 
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: 100% 100%;
+        background-color: $black; /* in case the video doesn't fit the whole page*/
+        background-image: url(#{$path-img}/bg-video.jpg); 
+        background-position: center center;
+        background-size: cover;
+        object-fit: cover; /*cover video background */
+    }
+}
+
+.profile-wrapper {
+    @include mq(mobile){
+        width: 90%;
+        margin: 0 auto;
+    }
+    @include mq(desktop){
+        display: inline-block;
+        width: 45%;
+        vertical-align: top;
+    }
+}
+
+.profile-img {
+	display: inline-block; 
+    width: 200px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-bottom: 30px;
+	border: 3px solid rgba(255,255,255,0.5);
+}
+
+.profile-intro {
+	width: 90%;
+	margin: 0 auto;
+	background: rgba(255,255,255,0.5);
+	padding: 10px;
+    border-radius: 6px;
+    @include mq(desktop){
+        width: 80%;
+    }
+    @include mq(wide){
+        width: 70%;
+    }
+	& p {
+        font-size: 15px;
+		color: $black;
+        line-height: 22px;
+        @include mq(tablet){
+            font-size: 16px;
+        }
+	}
+}
+
+.profile-skills {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0 70px;
+    @include mq(mobile){
+        width: 80%;
+    }
+    @include mq(tablet){
+        width: 90%;       
+    }
+    @include mq(desktop){
+        padding: 0;
+        display: inline-block;
+        width: auto;
+        vertical-align: top;
+    }
+}
+
+.row {
+	font-size: 0;
+	color: $black;
+	text-align: center;
+    cursor: pointer;
+    @include mq(tablet){
+        text-align: center;
+        margin: 10px 0;    
+    }
+    @include mq(desktop){
+        text-align: left;
+    }
+    @include mq(wide){
+        margin: 15px 0;
+    }
+	& span {
+		font-size: 16px;
+        display: inline-block;
+        width: 100%;
+		background: rgba(255,255,255,0.5);
+		padding: 10px;
+		margin: 7px 0;
+        border-radius: 6px;
+        @include mq(tablet){
+            font-size: 17px;
+		    display: inline-block;
+            padding: 10px 15px;
+            margin: 0 5px;
+            width: auto;
+        }
+        @include mq(desktop){
+            display: inline-block;
+        }
+		& i {
+			padding-right: 5px;
+            font-size: 18px;
+            color: $punch;
+		}
+	}
+}
+
+/* Projects */
+.project-list {
+    margin: 10px 0 60px;
+}
+
+.projects {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    @include mq(tablet) {
+        width: 80%;
+        text-align: center;
+    }
+    @include mq(wide){
+        text-align: left;
+    }
+    & li.project {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+        margin: 0 5px;
+        width: 100%;
+        height: 230px;
+        text-align: center;
+        color: $black;
+        border: 1px solid $black;
+        border-radius: 6px;
+        @include mq(mobile){
+            height: 300px;
+        }
+        @include mq(tablet){
+            height: 350px;
+        }
+        @include mq(desktop){
+            height: 400px;
+        }
+        & > div.project-img {
+            margin: auto 0;
+            border-radius: 6px;
+            width: 90%;
+            height: 40%;
+            opacity: 0.7;
+            @include mq(desktop){
+                height: 50%;
+            }
+        }
+        &:after {
+            content:'';
+            position: absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            background: rgba(0,0,0,0.4);
+            z-index: -1;
+        }
+    }
+}
+
+.project {
+    font-weight: bold;
+    @include e(title){
+        width: 90%;
+        display: inline-block;
+        margin: auto 0;
+        padding: 7px 3px;
+        background: rgba(255,255,255,0.7);
+        color: $black;
+        line-height: 24px;
+        border-radius: 6px;
+        font-size: 16px;
+        @include mq(mobile) {
+            padding: 10px 5px;        
+        }
+        @include mq(desktop){
+            margin: 10px auto;
+        }
+        @include m(subtitle){
+            display: block;
+            font-size: 13px;
+            color: $punch;
+            padding: 10px 0 0;
+        }
+    }
+}
+
+.signature {
+    margin: 20px auto;
+    position: relative;
+    width: 90%;
+    z-index: 10;
+    & span {
+        color: $black; 
+        text-shadow: 1px 1px 1px #333;
+        font-size: 18px;
+        & i {
+            padding: 0 5px;
+        }
+    }
+}
+
+
+

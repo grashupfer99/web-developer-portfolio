@@ -1,0 +1,160 @@
+/* Top nav menu */
+#menu li.active{
+	background:#666;
+	background: rgba(0,0,0, 0.5);
+	color: #fff;
+	& a {
+		color: #fff;
+		padding: 9px 18px;
+		display:block;
+		&:hover {
+			color: #000;
+			background:#666;
+    		background: rgba(0,0,0, 0.5);
+			border-radius: 10px;
+			& i.fa:before {
+				color: #fff;
+			}
+		}
+	}
+}
+
+#menu li {
+	&:hover {
+		background: rgba(255,255,255, 0.8);
+	}
+	& a {
+		padding: 9px 18px;
+		display:block;
+		&:hover span {
+			@include mq(wide) {
+				top: -40px;
+				@include custom-cubic;
+			}
+		}
+		&:hover i.fa:before {
+			@include mq(wide) {
+				top: .7rem;
+				@include custom-cubic;
+			}
+		}	
+	}
+}
+
+/* Modal */
+.modal.is-active {
+	display: block;
+}
+
+/* Burger menu */
+.sidenav-toggle__inner {
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.sidenav-toggle__inner.is-active {
+	@include transform(rotate(45deg));
+	&:before {
+		border: 5px solid #ecf0f1;
+	}
+	& .line {
+		width: 28px;
+		@include child(1) {
+			@include transform(translateY(13px));
+		}
+		@include child(2) {
+			opacity: 0;
+		}
+		@include child(3) {
+			 @include transform(translateY(-13px) rotate(90deg));
+		}
+	}
+}
+
+/* About section */
+.row > span {
+	@include transition(all .4s ease-in-out);
+	&:hover {
+		@include transform(rotate(-20deg));
+		background: rgba(255,255,255,0.9);
+	}
+}
+
+.profile-img {
+	&:hover img{
+		@include mq(wide){
+			@include transform(scale(1.1));
+		}
+	}
+}
+
+/* Projects */
+.inner-url {
+	& a:hover {
+		@include mq(desktop){
+			opacity: 0.6;
+		}
+	}
+	& span:hover {
+		@include mq(desktop){
+			opacity: 0.6;
+		}
+	}
+}
+
+.project {
+	@include e(btn){
+		&:hover {
+			@include mq(desktop){
+				font-weight: bold;
+				background: rgba(255,255,255, 0.9);
+			}
+		}
+	}
+}
+
+.contact-me-btn a {
+	&:hover {
+		@include mq(desktop){
+			background: rgba(255,255,255, 0.6);
+			color: $black;
+			&:hover::before,
+			&:hover::after {
+				width: 100%;
+				height: 100%;
+			}
+			&:hover::before {
+				border-top-color: $black; 
+				border-right-color: $black;
+				transition:
+				width 0.25s ease-out,
+				height 0.25s ease-out 0.25s;
+			}
+
+			&:hover::after {
+				border-bottom-color: $black;
+				border-left-color: $black;
+				transition:
+				border-color 0s ease-out 0.5s,
+				width 0.25s ease-out 0.5s, 
+				height 0.25s ease-out 0.75s; 
+			}
+		}
+	}
+}
+
+.contact-info li a {
+	&:hover {
+		@include mq(desktop){
+	    	background: rgba(255,255,255,0.8);
+        	font-weight: bold;
+		}
+	}
+}
+
+.social-media li a {
+	&:hover {
+		color: rgba(255,255,255,.8);
+	}
+}

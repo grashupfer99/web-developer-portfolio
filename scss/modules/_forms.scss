@@ -1,0 +1,40 @@
+.contact-form {
+    position: relative;
+    width: 90%;
+    height: 350px;
+    margin: 20px auto 40px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    border: 1px solid $black;
+    @include mq(mobile){
+        width: 80%;
+    }
+    @include mq(tablet){
+        width: 70%;
+        margin: 20px auto;
+    }
+    @include mq(desktop){
+        width: 50%;
+        height: 450px;
+        margin: 0 auto;
+    }
+    @include mq(wide){
+        width: 40%;
+    }
+    @include e(wrapper) {
+        position: absolute;
+        width: 90%;
+        top: 40%;
+        left: 50%;
+        @include transform(translate(-50%,-50%));
+        @include mq(mobile){
+            width: 90%;
+        }
+        @include mq(tablet){
+            width: 65%;
+        }
+        @include mq(desktop){
+            width: 70%;
+        }
+    }
+}
